@@ -20,16 +20,16 @@ else:
             with st.spinner("Analyzing comprehensive medical details..."):
                 try:
                     prompt = """
-                    Analyze this medical prescription/image in detail and provide the output clearly structured with these exact sections:
-                    1. **Medicine Name**: 
-                    2. **Purpose / What it is used for**: 
-                    3. **Side-Effects**: (List common or potential side-effects)
-                    4. **Dosage / How to take it**: 
-                    5. **Timing (When to eat)**: 
-                    6. **Frequency (How many times per day)**: 
-                    7. **Suitable Age Group**: 
-                    8. **Medicine Rating (out of 5)**: 
-                    9. **Safety Color Indicator**: (Output strictly as 🟢 Green, 🟡 Yellow, or 🔴 Red)
+                    Analyze this medical prescription/image thoroughly and provide the output structured with these exact sections:
+                    - **Medicine Name**: 
+                    - **Purpose / What it is used for**: 
+                    - **How to Take It (Administration)**: 
+                    - **Timing (When to eat)**: (e.g., Before food, After food, Morning, Night)
+                    - **Frequency (How many times per day)**: 
+                    - **Suitable Age Group**: 
+                    - **Side-Effects**: 
+                    - **Medicine Rating (out of 5)**: 
+                    - **Safety Color Indicator**: (Output strictly as 🟢 Green for safe/common, 🟡 Yellow for caution, or 🔴 Red for high risk/prescription-only)
                     """
                     response = client.models.generate_content(
                         model="gemini-3.6-flash",
