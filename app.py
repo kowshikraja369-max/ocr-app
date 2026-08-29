@@ -23,12 +23,13 @@ else:
                     Analyze this medical prescription/image in detail and provide the output clearly structured with these exact sections:
                     1. **Medicine Name**: 
                     2. **Purpose / What it is used for**: 
-                    3. **Dosage / How to take it**: 
-                    4. **Timing (When to eat)**: (e.g., Before/After food, Morning/Night)
-                    5. **Frequency (How many times per day)**: 
-                    6. **Suitable Age Group**: 
-                    7. **Medicine Rating (out of 5)**: 
-                    8. **Safety Color Indicator**: (Output strictly as 🟢 Green for safe/common, 🟡 Yellow for use with caution, or 🔴 Red for high risk/prescription-only)
+                    3. **Side-Effects**: (List common or potential side-effects)
+                    4. **Dosage / How to take it**: 
+                    5. **Timing (When to eat)**: 
+                    6. **Frequency (How many times per day)**: 
+                    7. **Suitable Age Group**: 
+                    8. **Medicine Rating (out of 5)**: 
+                    9. **Safety Color Indicator**: (Output strictly as 🟢 Green, 🟡 Yellow, or 🔴 Red)
                     """
                     response = client.models.generate_content(
                         model="gemini-3.6-flash",
