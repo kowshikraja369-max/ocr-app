@@ -12,7 +12,7 @@ else:
     client = genai.Client(api_key=api_key)
 
     uploaded_file = st.file_uploader("Upload Medical Image", type=["jpg", "jpeg", "png"])
-
+    
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption="Uploaded Image")
