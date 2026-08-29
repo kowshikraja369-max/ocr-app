@@ -31,7 +31,7 @@ else:
                     8. **Safety Color Indicator**: (Output strictly as 🟢 Green for safe/common, 🟡 Yellow for use with caution, or 🔴 Red for high risk/prescription-only)
                     """
                     response = client.models.generate_content(
-                        model="gemini-1.5-flash",
+                        model="gemini-2.5-flash",
                         contents=[image, prompt]
                     )
                     st.write(response.text)
