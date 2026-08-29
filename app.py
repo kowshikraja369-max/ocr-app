@@ -21,7 +21,7 @@ else:
                 try:
                     prompt = "Analyze this medical image, identify the medicine/prescription details, and explain what it is used for clearly."
                     response = client.models.generate_content(
-                        model="gemini-2.0-flash",
+                        model="gemini-3.6-flash",
                         contents=[image, prompt]
                     )
                     st.write(response.text)
